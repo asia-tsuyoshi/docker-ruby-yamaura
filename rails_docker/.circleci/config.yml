@@ -6,7 +6,7 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.7
-    working_directory: ~/docker-ruby-yamaura/src
+    working_directory: ~/docker-ruby-yamaura/rails_docker/src
     steps:
       - checkout:
           path: ~/docker-ruby-yamaura
@@ -25,7 +25,7 @@ jobs:
       BUNDLE_RETRY: "3"
       APP_DATABASE_HOST: "127.0.0.1"
       RAILS_ENV: test
-    working_directory: ~/docker-ruby-yamaura/src
+    working_directory: ~/docker-ruby-yamaura/rails_docker/src
     steps:
       - checkout:
           path: ~/docker-ruby-yamaura
